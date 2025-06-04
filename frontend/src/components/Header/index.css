@@ -1,0 +1,49 @@
+.nav-con{
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 10px 10px 15px 5px white; 
+      padding-top: 21px;
+    
+}  
+.nav-item-con{
+  
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center; 
+    width : 890px ; 
+    height: 80px;  
+    box-shadow: 10px 10px 15px 1px #7F7F7F;  
+    border-radius :128px  ;
+}
+.nav-log {
+    width: 44px;
+    height: 44.6px;
+} 
+.nav-item{ 
+    display : flex ; 
+    flex-direction: row;
+    align-items: center; 
+    list-style-type: none;  
+    justify-content: center;
+} 
+.list-item {
+    font-family: "Satoshi Variable";  
+    font-size: 16px;  
+    
+    margin-left: 15px;
+}  
+.create-job-button {
+    height: 38px; 
+    width : 123px ;  
+    border-radius: 30px; 
+    border: 1px; 
+    background-image: linear-gradient(#A128FF , #6100AD); 
+    gap: 10px; 
+    color: #ffffff; 
+    font-family: "Satoshi Variable";  
+    font-size: 16px;  
+   margin-left: 15px ;
+}
