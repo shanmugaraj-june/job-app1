@@ -4,7 +4,7 @@
     align-items: center; 
     justify-content: center; 
     box-shadow: 10px 10px 15px 5px white; 
-      padding-top: 21px;
+    padding-top: 21px;
     
 }  
 .nav-item-con{
@@ -32,12 +32,19 @@
 .list-item {
     font-family: "Satoshi Variable";  
     font-size: 16px;  
-    
-    margin-left: 15px;
+    padding-top: 8px; 
+    padding-right: 24px; 
+    padding-bottom: 8px; 
+    padding-left: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #303030;
+    font-weight: 600;
+    cursor: pointer;
 }  
 .create-job-button {
-    height: 38px; 
-    width : 123px ;  
+    
+    
     border-radius: 30px; 
     border: 1px; 
     background-image: linear-gradient(#A128FF , #6100AD); 
@@ -46,4 +53,179 @@
     font-family: "Satoshi Variable";  
     font-size: 16px;  
    margin-left: 15px ;
+} 
+.container {
+  position: relative;
+   height: 38px;
+  width : 123px ;  
+  overflow: hidden;
+  border: 1px solid #ccc;
+   background-image: linear-gradient(#A128FF , #6100AD); 
+  border-radius: 30px;
+  cursor: pointer; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  
+}
+.container:hover {
+  transform: scale(1.1);
+} 
+.list-item:hover{
+    transform: scale(1.1);
+}
+.text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  transition: transform 0.5s ease;
+  line-height: 60px; 
+   color: #ffffff;  
+   font-family: "Satoshi Variable";  
+}
+
+.text.create {
+  transform: translateY(0%);
+}
+
+.text.login {
+  transform: translateY(-100%);
+}
+
+.hover-trigger:hover .text.create {
+  transform: translateY(100%);
+}
+
+.hover-trigger:hover .text.login {
+  transform: translateY(0%);
+}
+
+
+.salary-range {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.open-btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+} 
+
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.3); /* dark transparent overlay */
+  backdrop-filter: blur(4px);     /* apply blur to background */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
+
+} 
+
+.modal-container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 600px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+select{
+    color: #333;
+}
+.modal-title {
+  font-size: 20px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+  color: #333;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+   color: #333;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+ 
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #888; 
+  color: #333;
+}
+
+.salary-inputs {
+  display: flex;
+  gap: 12px;
+}
+
+.salary-inputs input {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.save-btn {
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.publish-btn {
+  padding: 10px 24px;
+  background: #009eff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
