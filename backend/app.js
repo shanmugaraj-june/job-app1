@@ -9,7 +9,9 @@ dotenv.config({path  : path.join(__dirname , "config" , "config.env")})
 const jobs  = require('./routes/job');
 
 app.use(express.json()) ; 
-app.use(cors())
+app.use(cors()) 
+
+
 app.use('/api/v1/', jobs) ; 
 
 connectDatabase() ;
