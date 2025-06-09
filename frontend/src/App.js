@@ -5,6 +5,7 @@ const App = () => (
   <BrowserRouter>
      <Routes>
        <Route exact path="/" element={<Home />} />
+        <Route exact path="/search" element={<Home />} />
      </Routes>
   </BrowserRouter>
 )

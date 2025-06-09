@@ -3,14 +3,22 @@ import { RiUserVoiceLine } from "react-icons/ri";
 import { BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci"; 
 import { IoChevronDown } from "react-icons/io5"; 
-
+import {useNavigate} from "react-router-dom"
 import "./index.css"
 
 
 
 const Filter = () =>  {   
    
+  const [Keyword , setKeyword] = useState(""); 
+  const navigate  = useNavigate() ; 
+
+  const searchHandler = (event) => { 
+   
+        navigate('/search?keyword='+Keyword)
+    
   
+  }
   const [isOpen, setIsOpen] = useState(false);
   const [selectedType, setSelectedType] = useState('Job type');
 
@@ -32,9 +40,12 @@ const Filter = () =>  {
  
 
  return (<div className = "filter-con"> 
-    <div className = "input-con"  >  
+    <div className = "input-con" onKeyDown={searchHandler} >  
         <BsSearch className = "search-icon"/>
-        <input type = "text"  placeholder = "Search By Job Title, Role" className = "search-input" 
+        <input type = "text"  placeholder = "Search By Job Title, Role" className = "search-input"  
+        onChange={(e) =>setKeyword(e.target.value) 
+
+        }
        /> 
         <div> <hr  className = "line" /></div>
     </div> 
