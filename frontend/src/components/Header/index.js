@@ -1,4 +1,4 @@
-
+import { Link  } from "react-router-dom"
 import Popup from 'reactjs-popup';
 
 import "./index.css"
@@ -10,7 +10,7 @@ const Header = () => {
         <div className = "nav-item-con"> 
             <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVMeV0FEmg-_onLIp9Sn7yCl2OEaFT_fqicA&s" alt  = "logo" className = "nav-log"/> 
             <ul className = "nav-item">  
-                <li className = "list-item">Home</li> 
+               <Link to = "/" className ="Link"> <li className = "list-item">Home</li> </Link>
                 <li className = "list-item">Find Jobs</li> 
                 <li className = "list-item">Find Talenets</li> 
                 <li className = "list-item">About us</li> 
