@@ -19,19 +19,29 @@ const Filter = () =>  {
     
   
   }
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedType, setSelectedType] = useState('Job type');
+  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpenLoction , setIsLocationOpen ] = useState(false); 
 
-  const jobTypes = ['Full-time', 'Part-time', 'Contract', 'Internship'];
+  const [selectedType, setSelectedType] = useState('Job type'); 
+  const [selectedLocation, setSelectedLocation] = useState('Preferred Location');
+
+  const jobTypes = ['Full-time', 'Part-time', 'Contract', 'Internship']; 
+  const jobLoaction = ["Chennai", "Bangalore", "Hyderabad", "Mumbai"];
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-
+ const toggleDropdownLocation = () =>{
+  setIsLocationOpen(!isOpenLoction)
+ }
   const handleSelect = (type) => {
     setSelectedType(type);
     setIsOpen(false);
-  }; 
+  };  
+  const handleSelectLocation =(type) =>{
+     setSelectedLocation(type);
+     setIsLocationOpen(false)
+  }
 
  const [minVal, setMinVal] = useState(0);
   const [maxVal, setMaxVal] = useState(80);
@@ -50,9 +60,22 @@ const Filter = () =>  {
         <div> <hr  className = "line" /></div>
     </div> 
     <div className = "input-con">  
-        <CiLocationOn className = "search-icon"/>
-        <input type = "text"  placeholder = "Preferred Location" className = "search-input"/> 
-        <IoChevronDown  className = "down-logo"/>
+         <div className="dropdown-container">
+      <div className="dropdown-header" onClick={toggleDropdownLocation}>
+       <div> <CiLocationOn className="icon" />
+        <span>{selectedLocation}</span></div>
+        <IoChevronDown className="dropdown-icon" />
+      </div>
+      { isOpenLoction && (
+        <ul className="dropdown-list">
+          {jobLoaction.map((type, index) => (
+            <li key={index} onClick={() => handleSelectLocation(type)}>
+              {type}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
         <div> <hr  className = "line" /></div>
     </div> 
    <div className = "input-con">  
@@ -77,8 +100,8 @@ const Filter = () =>  {
     <div className = "input-con">  
         <div className="salary-slider-container">
       <div className="salary-slider-labels">
-        <span>Salary Per Month</span>
-        <span>₹{minVal}k - ₹{maxVal}k</span>
+        <span  className = "salary-per-month">Salary Per Month</span>
+        <span className  ="range-text">₹{minVal}k - ₹{maxVal}k</span>
       </div>
 
       <div className="slider-track">
