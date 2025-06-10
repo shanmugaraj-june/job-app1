@@ -15,8 +15,8 @@
 .search-input{
     border: none; 
     outline: none;
-    font-family: "Satoshi Variable";   
-    font-weight: 500; 
+font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 500; 
     font-size: 16px; 
     line-height: 100%; 
     letter-spacing: 0%;  
@@ -55,7 +55,7 @@ height: 50px;
 .dropdown-container {
   width: 300px;
   position: relative;
-  font-family: "Satoshi Variable";   
+ font-family: 'Satoshi Variable', sans-serif;   
     color: #686868; 
     
 }
@@ -110,20 +110,21 @@ height: 50px;
   justify-content: space-between;
   margin-bottom: 10px;
   font-weight: bold; 
-  font-family: "Satoshi Variable";
+ font-family: 'Satoshi Variable', sans-serif;
 }
 
 
 .salary-slider-container {
   width: 320px;
-  font-family: Arial, sans-serif;
+ font-family: 'Satoshi Variable', sans-serif;
 }
 
 .salary-slider-labels {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 12px; 
+ 
 }
 
 .slider-track {
@@ -179,4 +180,18 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%;
   cursor: pointer;
   border: none;
+}
+.salary-per-month{
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+} 
+.range-text{
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
 }
