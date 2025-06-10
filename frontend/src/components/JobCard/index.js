@@ -1,13 +1,16 @@
 import React from 'react'; 
 import { FaUser, FaBriefcase, FaMoneyBill } from 'react-icons/fa'; 
 import "./index.css" 
+;
 
 export default function JobCard ({jobDetails}) { 
 
     return (
          <div className="job-card">
       <div className="job-card-header">
-        <img src= {jobDetails.logoUrl} alt="Amazon" className="company-logo" />
+        <div className  ="campany-logo-con">
+           <img src= {jobDetails.logoUrl} alt="Amazon" className="company-logo" />
+        </div>
         <span className="badge">{jobDetails.postedAt}h Ago</span>
       </div>
 
@@ -17,12 +20,12 @@ export default function JobCard ({jobDetails}) {
 
       <div className="job-info">
         <span><FaUser />{jobDetails.experience} yr Exp</span>
-        <span><FaBriefcase /> {jobDetails.type}</span>
+        <span><FaBriefcase />{jobDetails.type}</span>
         <span><FaMoneyBill /> {jobDetails.salary}LPA</span>
       </div>
 
       <ul className="job-description">
-              {jobDetails.descriptions.map(each => <li>
+              {jobDetails.descriptions.map(each => <li className = 'des-text'>
                  {each.description}
               </li>)}
       </ul>
