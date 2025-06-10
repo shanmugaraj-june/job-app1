@@ -1,37 +1,56 @@
 .job-card {
-  width: 300px;
+  width: 316px;
   background: #fff;
-  border-radius: 16px;
+  border-radius: 12px;
   margin: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
   transition: box-shadow 0.3s ease;
   padding: 20px;
   font-family: Arial, sans-serif;
-  position: relative;
+  position: relative;  
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  height: 360px;
 }
 
 .job-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: flex-start;  
   border-radius: 100px; 
   color: #000000;
  
 
 } 
 .header-con{
-    display: flex ;
-    flex-direction: row;  
-    align-items: flex-start;
+  display: flex; 
+flex-direction: column; 
+align-items:flex-start; 
+justify-content: center;
+     
+  /* Required for top/left to take effect */
+  padding: 10px;
 
 }
 
 .company-logo {
  
-  height: 75px;
-  object-fit: contain; 
-  font-size: 30px;
+  width: 65.89px; 
+  height: 65.89px;
+  font-size: 30px;  
   
+   
+  
+} 
+.campany-logo-con{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */ 
+  border-radius: 65.89px;
+  padding: 13px;
 }
 
 .badge {
@@ -41,7 +60,7 @@ align-items: center;
 justify-content: center;
   background: #e0f0ff;
   color:  #000000; 
-  font-family:  "Satoshi Variable";
+  font-family: 'Satoshi Variable', sans-serif;
   font-size: 14px;
   padding: 4px 8px;
   border-radius: 12px;
@@ -54,13 +73,13 @@ justify-content: center;
 }
 
 .job-title {
-  font-size: 20px; 
-  line-height: 100%; 
-  letter-spacing: 0%;
+   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 700;
-  margin: 12px 0; 
-  font-family: "Satoshi Variable"; 
-  color: #5A5A5A;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+ 
 }
 
 .job-info {
@@ -69,22 +88,36 @@ justify-content: center;
   font-size: 14px;
   color: #555;
   margin-bottom: 12px; 
-   color: #5A5A5A;
+   color: #5A5A5A; 
+   gap: 10px; 
+  
 }
 
 .job-info span {
   display: flex;
   align-items: center;
   gap: 4px; 
-   color: #5A5A5A;
+   color: #5A5A5A; 
+     
 }
 
 .job-description {
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   margin-bottom: 16px;
   padding-left: 18px; 
    color: #5A5A5A;
+  width: 300px;
+  height: 76px;
+  font-weight: 500; 
+  line-height: 100%; 
+  letter-spacing: 0%; 
+
+  
+   
+} 
+.des-text{
+ font-family: 'Satoshi Variable', sans-serif; 
 }
 
 .apply-btn {
@@ -97,7 +130,8 @@ justify-content: center;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer; 
-  padding: 12px 10px 12px 10px;
+  padding: 12px 10px 12px 10px; 
+  font-family: 'Satoshi Variable', sans-serif; 
 }
 
 .apply-btn:hover {
