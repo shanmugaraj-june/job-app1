@@ -30,7 +30,7 @@
     justify-content: center;
 } 
 .list-item {
-    font-family: "Satoshi Variable";  
+  font-family: 'Satoshi Variable', sans-serif;
     font-size: 16px;  
     padding-top: 8px; 
     padding-right: 24px; 
@@ -50,7 +50,7 @@
     background-image: linear-gradient(#A128FF , #6100AD); 
     gap: 10px; 
     color: #ffffff; 
-    font-family: "Satoshi Variable";  
+   font-family: 'Satoshi Variable', sans-serif;
     font-size: 16px;  
    margin-left: 15px ;
 } 
@@ -68,15 +68,16 @@
   align-items: center; 
   justify-content: center; 
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 2s ease;
   
 }
 .container:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translateX(10px) translateY(3px);
 } 
-.list-item:hover{
-    transform: scale(1.1);
-}
+.list-item:hover{ 
+  
+    transform: scale(1.1) translateX(10px) translateY(3px);
+} 
 .text {
   position: absolute;
   width: 100%;
@@ -85,7 +86,7 @@
   transition: transform 0.5s ease;
   line-height: 60px; 
    color: #ffffff;  
-   font-family: "Satoshi Variable";  
+   font-family: 'Satoshi Variable', sans-serif;
 }
 
 .text.create {
@@ -139,7 +140,7 @@
   padding: 24px;
   border-radius: 12px;
   width: 600px;
-  font-family: Arial, sans-serif;
+  font-family: 'Satoshi Variable', sans-serif;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   color: #333;
 }
@@ -228,4 +229,7 @@ select{
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+.Link{
+  text-decoration: none;
 }
